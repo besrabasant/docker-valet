@@ -1,4 +1,4 @@
-# docker-valet
+# Docker Valet for Linux
 
 ## Introduction
 
