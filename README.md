@@ -4,7 +4,7 @@
 
 Docker Valet for Linux is a development environment for docker minimalists. No `/etc/hosts` file to manage, no ports to manage, no proxy configuration files. You can even share your sites publicly using local tunnels. Yeah, we like it too.
 
-Docker Valet for Linux creates a _valet_ docker network on your system to always run [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) in the background when your machine starts. With [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) Docker Valet for Linux proxies all requests on the `*.dev` domain to point to docker web apps on your local machine.
+Docker Valet for Linux creates a _valet_ docker network on your system to always run [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) in the background when your machine starts. With [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) Docker Valet for Linux proxies all requests on the `*.test` domain to point to docker web apps on your local machine.
 
 ## Installation
 
