@@ -1,16 +1,17 @@
 # docker-valet
 
 ## Introduction
-Docker Valet is a development environment for docker minimalists. No `/etc/hosts` file to manage, no ports to manage, no proxy configuration files. You can even share your sites publicly using local tunnels. Yeah, we like it too.
 
-Docker Valet creates a _valet_ docker network on your system to always run [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) in the background when your machine starts. With [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) Docker Valet proxies all requests on the `*.dev` domain to point to docker web apps on your local machine.
+Docker Valet for Linux is a development environment for docker minimalists. No `/etc/hosts` file to manage, no ports to manage, no proxy configuration files. You can even share your sites publicly using local tunnels. Yeah, we like it too.
+
+Docker Valet for Linux creates a _valet_ docker network on your system to always run [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) in the background when your machine starts. With [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq) and [traefik](http://traefik.io) Docker Valet for Linux proxies all requests on the `*.dev` domain to point to docker web apps on your local machine.
 
 ## Installation
 
 ```shell
-git clone https://github.com/marcusmyers/docker-valet
+git clone https://github.com/besrabasant/docker-valet
 cd docker-valet
-script/bootstrap <interface> # This could be eth0 or your wifi interface
+script/bootstrap <interface> up # <interface> could be eth0 or your wifi interface
 ```
 
 ## Usage
@@ -34,11 +35,12 @@ services:
       - valet
       - default
     labels:
-      - "traefik.frontend.rule=Host:laravel.dev"
+      - "traefik.frontend.rule=Host:laravel.test"
       - "traefik.port=80"
       - "traefik.docker.network=valet"
     command: php artisan serve --host=0.0.0.0
 ```
 
 ## License
-Docker Valet is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+Docker Valet for Linux is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
